@@ -1,0 +1,30 @@
+name: Build iOS Mod
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install dependencies
+      run: |
+        brew install cmake ninja
+    
+    - name: Build iOS Mod
+      run: |
+        mkdir -p build
+        cd build
+        cmake .. -DCMAKE_BUILD_TYPE=Release
+        cmake --build .
+    
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: gd-ai-builder-ios
+        path: build/
