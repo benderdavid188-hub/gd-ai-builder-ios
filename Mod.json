@@ -1,0 +1,20 @@
+{
+  "geode": "3.0.0",
+  "version": "1.0.0",
+  "gd": {
+    "ios": "2.206"
+  },
+  "metadata": {
+    "developer": "You",
+    "name": "AI Builder",
+    "description": "AI-powered suggestions for your GD levels.",
+    "details": "Get decoration, logic, mechanics suggestions with AI."
+  },
+  "settings": {
+    "ai-model": {
+      "name": "AI Model",
+      "type": "string",
+      "default": "openai"
+    }
+  }
+}
