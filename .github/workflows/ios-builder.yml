@@ -24,7 +24,7 @@ jobs:
         cmake --build .
     
     - name: Upload Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: gd-ai-builder-ios
         path: build/
